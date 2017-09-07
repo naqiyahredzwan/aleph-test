@@ -1,0 +1,65 @@
+.navbar {
+	margin-bottom: 0px !important;
+}
+
+.navbar-default {
+    background-color: #232323 !important;
+}
+
+.navbar-brand {
+	height: 100px !important;
+}
+
+.navbar-brand>img {
+	max-height: 100%;
+	height: 100%;
+	width: auto;
+	margin: 0 auto;
+}
+
+.login {  
+	color: #fff;
+	padding: 30px;
+}
+
+.page-header {
+	background-color: #dff0d8;
+	color: #3c763d;
+	margin: 0px 0 20px !important;
+}
+
+.page-subheader {
+	margin: 10px;
+	padding-bottom: 15px !important;
+}
+
+.well {
+	background-color: #ddd !important;
+}
+
+.highlight {
+	background-color: #ffffe0 !important;
+}
+
+.media-remove {
+	color: #D35F78;
+	font-weight: bold;
+}
+
+.media-left>img {
+	height: 15%;
+}
+
+.media-heading {
+	color: #2b7fb8;
+	font-weight: bold;
+}
+
+.media-rating {
+	color: #575856;
+	font-weight: bold;
+}
+
+.media-body {
+	padding-top: 20px;
+}

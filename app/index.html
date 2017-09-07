@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Aleph Frontend Coding Exam</title>
+	<link rel="stylesheet" type="text/css" href="style.css">
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/angular.js/1.6.5/angular.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
+</head>
+<body ng-app="mainApp" ng-controller="mainCtrl">
+	<nav class="navbar navbar-default">
+	  	<div class="container">
+	  		<div class="row">
+			    <div class="col-md-6">
+			      <span class="navbar-brand" href="#">
+			        <img ng-src="../assets/logo.png">
+			      </span>
+			    </div>
+			    <div class="col-md-6 text-right login">
+			    	<h4>{{login.prefix}}<b>{{login.name}}</b>{{login.suffix}}</h4>
+		      	</div>
+	      	</div>
+	  	</div>
+	</nav>
+
+  	<div class="page-header">
+  		<div class="container">
+  		<h1>List of Projects</h1>
+  		</div>
+	</div>
+
+	<div class="row">
+		<span class="page-subheader text-center col-xs-8 col-xs-offset-2">
+			A unique breed of engineers, craftsmen &amp; artists spread across Singapore, Indonesia, 	Malaysia, Thailand and Vietnam.
+		</span>
+	</div>
+
+  	<div class="container" ng-repeat="(iIndex, itemData) in data">
+	 	<div class="row" ng-if="$even">
+	  		<div class="col-sm-6" ng-if="item" ng-repeat="(jIndex, item) in [data[$index], data[$index + 1]]">
+	  			<div class="well" ng-class="{'highlight' : item.rating == 5}">
+			  		<div class="row media">
+			  			<div class="col-md-4">
+			        		<a href="{{item.url}}" class="media-left">
+			        			<img class="media-object" ng-src="{{item.thumbnail}}">
+		        			</a>
+	        			</div>
+	        			<div class="col-md-8">
+					    	<div class="media-body">
+					      		<a href="{{item.url}}"><h4 class="media-heading">{{item.title}}</h4></a>
+					      		<p class="media-rating">Rating: {{item.rating}}</p>
+					      		<a href="#" class="media-remove" ng-click="removeItem(iIndex + jIndex)">Remove</a>
+					    	</div>
+				    	</div>
+			  		</div>
+		  		</div>
+	  		</div>
+		</div>
+	</div>
+
+	<script type="text/javascript" src="script.js"></script>
+	<script type="text/javascript" src="data.json"></script>
+</body>
+</html>
